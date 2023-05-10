@@ -35,15 +35,14 @@ decoder = Decoder(
         DecoderModes.AND_OR,
         DecoderModes.OR_AND
     ],
-    coordinates = [0, 0]
+    coordinates=[0, 0]
 )
 decoder.build()
 ```
 `formulas`+`modes` in this example is the equivalent of
 
 ```math
-\displaylines{OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C \\
-OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C)}
+\displaylines{OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C \\ OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C)}
 
 ```
 
@@ -60,7 +59,7 @@ render = render_all(
     mirror_y=False
 )
 with open("render.atanua", "w") as f:
-    r.write(render)
+    f.write(render)
 ```
 
 Render.atanua

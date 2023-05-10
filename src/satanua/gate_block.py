@@ -1,7 +1,7 @@
-from constants import *
-from gate import Gate
-from connection_pin import ConnectionPin
-from switch import Switch
+from .constants import *
+from .gate import Gate
+from .connection_pin import ConnectionPin
+from .switch import Switch
 
 def count_inputs(svf):
     return sum([sum([int(num != None) for num in row]) for row in svf])

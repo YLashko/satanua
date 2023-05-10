@@ -1,5 +1,5 @@
-from constants import GRID_SIZE, SCENE_SIZE
-from wire import Wire
+from .constants import GRID_SIZE, SCENE_SIZE
+from .wire import Wire
 
 def _id(gate_a, gate_b):
     return f"{gate_a.id} {gate_b.id}"

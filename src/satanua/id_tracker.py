@@ -1,4 +1,4 @@
-from constants import SCENE_SIZE
+from .constants import SCENE_SIZE
 
 
 def _id(gate_a, gate_b):

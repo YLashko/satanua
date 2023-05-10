@@ -1,5 +1,5 @@
-from wire import Wire
-from constants import *
+from .wire import Wire
+from .constants import *
 
 def _id(gate_a, gate_b):
     return f"{gate_a.id} {gate_b.id}"

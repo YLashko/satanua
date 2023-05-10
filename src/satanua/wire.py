@@ -1,4 +1,4 @@
-from constants import GRID_SIZE
+from .constants import GRID_SIZE
 
 
 class Wire:

@@ -1,10 +1,10 @@
 from enum import Enum
 
-class DecoderModes:
+class DecoderModes(Enum):
     AND_OR = "AND"
     OR_AND = "OR"
 
-class LogicGateTypes:
+class LogicGateTypes(Enum):
     AND = "Logic AND"
     OR = "Logic OR"
     NOT = "Logic NOT"

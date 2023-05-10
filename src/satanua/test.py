@@ -1,8 +1,8 @@
-from gate import Gate
-from connection_pin import ConnectionPin
-from gate_block import GateBlock, SingleVarScheme, MultiVarScheme, Decoder
-from wire import Wire
-from id_tracker import WireStack, ObjStack, render_all
+from .gate import Gate
+from .connection_pin import ConnectionPin
+from .gate_block import GateBlock, SingleVarScheme, MultiVarScheme, Decoder
+from .wire import Wire
+from .id_tracker import WireStack, ObjStack, render_all
 
 
 class App:
