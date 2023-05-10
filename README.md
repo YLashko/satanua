@@ -42,8 +42,9 @@ decoder.build()
 `formulas`+`modes` in this example is the equivalent of
 
 ```math
-OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C \\\
-OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C)
+\displaylines{OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C \\
+OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C)}
+
 ```
 
 
