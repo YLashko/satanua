@@ -119,15 +119,17 @@ class SingleVarScheme:
             ))
             self.inputs += block.in_pins
             acc_offset += draw_size
-            first_layer_outputs.append(block.out_gates[0])
-        GateBlock(
-            self.gates_sequence[1],
-            [0, 0],
-            self.obj_stack,
-            self.wire_stack,
-            0,
-            first_layer_outputs
-        )
+            flo = block.out_gates[0]
+            first_layer_outputs.append(flo)
+        if len(first_layer_outputs) > 1:
+            GateBlock(
+                self.gates_sequence[1],
+                [0, 0],
+                self.obj_stack,
+                self.wire_stack,
+                0,
+                first_layer_outputs
+            )
 
 class MultiVarScheme:
     def __init__(self, obj_stack, wire_stack, formulas=[[1]], modes=["AND"], coordinates=[100, 0]) -> None:

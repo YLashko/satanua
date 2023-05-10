@@ -1,3 +1,4 @@
+from .enums import DecoderModes
 from .gate import Gate
 from .connection_pin import ConnectionPin
 from .gate_block import GateBlock, SingleVarScheme, MultiVarScheme, Decoder
@@ -14,19 +15,56 @@ class App:
         dec = Decoder(
             self.os,
             self.ws,
-            [
+            formulas=[
                 [
-                    [0, 1, 0],
-                    [1, None, 1],
-                    [1, 0, 1]
+                    [0, 0, 1, 0],
+                    [1, 0, 1, 0],
+                    [1, 0, 0, 1]
                 ],
                 [
-                    [0, None, None],
-                    [1, 0, 0],
-                    [0, 0, 1]
+                    [0, 0, 0, 1],
+                    [0, 0, 1, 0],
+                    [0, 1, 0, 0],
+                    [1, 0, 0, 1]
+                ],
+                [
+                    [0, 0, 0, 1],
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 1],
+                    [1, 0, 0, 1]
+                ],
+                [
+                    [0, 0, 1, 0],
+                    [0, 1, 0, 1],
+                    [1, 0, 0, 1]
+                ],
+                [
+                    [0, 0, 1, 0]
+                ],
+                [
+                    [0, 1, 0, 0],
+                    [0, 1, 0, 1],
+                    [1, 0, 0, 1]
+                ],
+                [[1, 1, 1, 0]],
+                [
+                    [1, 1, 1, 0],
+                    [1, 1, 0, 1],
+                    [1, 0, 1, 1],
+                    [1, 0, 1, 0],
+                    [0, 1, 1, 0]
                 ]
             ],
-            modes=["AND", "OR"]
+            modes=[
+                DecoderModes.AND_OR,
+                DecoderModes.AND_OR,
+                DecoderModes.AND_OR,
+                DecoderModes.AND_OR,
+                DecoderModes.AND_OR,
+                DecoderModes.AND_OR,
+                DecoderModes.OR_AND,
+                DecoderModes.OR_AND
+            ],
         )
         
         dec.build()
