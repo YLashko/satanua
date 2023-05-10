@@ -40,8 +40,12 @@ decoder = Decoder(
 decoder.build()
 ```
 `formulas`+`modes` in this example is the equivalent of
-$$ {OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C }\\\
-{OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C) }$$
+
+```math
+OutVal_1 = \overline{A}B\overline{C}+AC+A\overline{B}C \\\
+OutVal_2 = (\overline{A})*(A+\overline{B}+\overline{C})*(\overline{A}+\overline{B}+C)
+```
+
 
 You can then export the whole scene to .atanua using 
 ```python
@@ -51,9 +55,12 @@ render = render_all(
     os=obj_stack,
     ws=wire_stack,
     rotate=0,
-    mirror_x=False, 
+    mirror_x=False,
     mirror_y=False
 )
 with open("render.atanua", "w") as f:
     r.write(render)
 ```
+
+Render.atanua
+![image](./render.png)
